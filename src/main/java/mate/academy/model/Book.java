@@ -1,15 +1,17 @@
 package mate.academy.model;
 
+import java.math.BigDecimal;
+
 public class Book {
 
     private Long id;
     private String title;
-    private Double price;
+    private BigDecimal price;
 
     public Book() {
     }
 
-    public Book(Long id, String title, Double price) {
+    public Book(Long id, String title, BigDecimal price) {
         this.id = id;
         this.title = title;
         this.price = price;
@@ -31,12 +33,16 @@ public class Book {
         this.title = title;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Book{id=" + id + ", title='" + title + "', price=" + price + "}";
+    }
 }

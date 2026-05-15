@@ -1,9 +1,9 @@
-package mate.service.impl;
+package mate.academy.service.impl;
 
 import mate.academy.dao.BookDao;
 import mate.academy.exception.DataProcessingException;
 import mate.academy.model.Book;
-import mate.service.BookService;
+import mate.academy.service.BookService;
 
 public class BookServiceImpl implements BookService {
     private final BookDao bookDao;
@@ -15,13 +15,13 @@ public class BookServiceImpl implements BookService {
     @Override
 
     public Book save(Book book) {
-        return bookDao.save(book);
+        return bookDao.create(book);
     }
 
     @Override
     public Book get(Long id) {
         return bookDao.findById(id).orElseThrow(
-                () -> new DataProcessingException("Can't get book by id " + id));
+                () -> new DataProcessingException("Can't get book by id " + id, null));
     }
 
     @Override
@@ -31,7 +31,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public boolean delete(Long id) {
-        return bookDao.delete(id);
+        return bookDao.deleteById(id);
     }
 
 }

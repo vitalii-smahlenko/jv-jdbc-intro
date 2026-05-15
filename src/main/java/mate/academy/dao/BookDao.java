@@ -1,17 +1,17 @@
 package mate.academy.dao;
 
+import java.util.List;
 import java.util.Optional;
-
 import mate.academy.model.Book;
 
 public interface BookDao {
-    Book save(Book book);
-
-    Book get(Long id);
+    Book create(Book book);
 
     Optional<Book> findById(Long id);
 
+    List<Book> findAll();
+
     Book update(Book book);
 
-    boolean delete(Long id);
+    boolean deleteById(Long id);
 }

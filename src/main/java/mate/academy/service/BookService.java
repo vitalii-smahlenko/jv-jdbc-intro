@@ -1,4 +1,4 @@
-package mate.service;
+package mate.academy.service;
 
 import mate.academy.model.Book;
 
