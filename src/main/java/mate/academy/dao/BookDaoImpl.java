@@ -11,7 +11,7 @@ import java.util.Optional;
 import mate.academy.exception.DataProcessingException;
 import mate.academy.lib.Dao;
 import mate.academy.model.Book;
-import mate.utils.ConnectionUtil;
+import mate.academy.utils.ConnectionUtil;
 
 @Dao
 public class BookDaoImpl implements BookDao {
