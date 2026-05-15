@@ -21,7 +21,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public Book get(Long id) {
         return bookDao.findById(id).orElseThrow(
-                () -> new DataProcessingException("Can't get book by id " + id, null));
+                () -> new DataProcessingException("Can't get book by id " + id, new RuntimeException()));
     }
 
     @Override
